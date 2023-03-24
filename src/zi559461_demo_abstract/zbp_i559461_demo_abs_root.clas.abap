@@ -1,0 +1,9 @@
+CLASS zbp_i559461_demo_abs_root DEFINITION
+    PUBLIC
+    ABSTRACT
+    FINAL
+    FOR BEHAVIOR OF zi559461_demo_abs_root.
+ENDCLASS.
+
+CLASS zbp_i559461_demo_abs_root IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service ZI559461_DEMO_SD_ABS_ROOT {
+  expose ZI559461_DEMO_ABS_ROOT;
+}
