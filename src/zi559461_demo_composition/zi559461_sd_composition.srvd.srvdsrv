@@ -1,0 +1,6 @@
+@EndUserText.label: 'Composition'
+define service ZI559461_SD_COMPOSITION {
+  expose zi559461_c_trav_tcve;
+  expose zi559461_c_booking_tcve;
+  expose zi559461_c_booking_sup_tcve;
+}

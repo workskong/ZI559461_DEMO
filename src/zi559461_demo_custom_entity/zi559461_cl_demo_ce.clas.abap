@@ -109,20 +109,8 @@ CLASS zi559461_cl_demo_ce IMPLEMENTATION.
     DATA: lt_data TYPE t_et_data,
           ls_data TYPE LINE OF t_et_data.
 
-    lt_data = VALUE #( ( Id = 1 Name = 'Anna' City = 'Seoul' )
-                       ( Id = 2 Name = 'Peter' City = 'Tokyo' ) ).
-
-    ls_data-Id   = 3.
-    ls_data-Name = 'Marc'.
-    ls_data-City = 'Suwon'.
-    APPEND ls_data TO lt_data.
-
-    LOOP AT  filter_cond  INTO DATA(filter_condition).
-      READ TABLE lt_data WITH KEY id = filter_condition-range[ 1 ]-low INTO ls_data-Id.
-      IF sy-subrc = 0.
-        DELETE lt_data WHERE id NE ls_data-Id.
-      ENDIF.
-    ENDLOOP.
+    lt_data = VALUE #( ( bukrs = '1000' Name = 'Seoul' )
+                       ( bukrs = '2000' Name = 'Tokyo' ) ).
 
     IF lt_data IS NOT INITIAL.
       et_data = lt_data.

@@ -1,4 +1,5 @@
 @EndUserText.label: 'Service Definition'
 define service ZI559461_DEMO_SD_CE {
   expose ZI559461_DEMO_CE;
+  expose ZI559461_DEMO_CE2;
 }

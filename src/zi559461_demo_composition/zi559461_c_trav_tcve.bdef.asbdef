@@ -1,0 +1,17 @@
+projection;
+//strict ( 1 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for zi559461_c_trav_tcve //alias <alias_name>
+{
+  use association _Booking;
+}
+
+define behavior for zi559461_c_booking_tcve //alias <alias_name>
+{
+  use association _Travel;
+}
+
+define behavior for zi559461_c_booking_sup_tcve //alias <alias_name>
+{
+  use association _Booking;
+}

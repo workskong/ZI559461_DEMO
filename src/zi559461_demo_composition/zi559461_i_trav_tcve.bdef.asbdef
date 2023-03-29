@@ -1,0 +1,22 @@
+unmanaged implementation in class zbp_i559461_i_trav_tcve unique;
+//strict ( 1 );
+
+define behavior for zi559461_i_trav_tcve //alias <alias_name>
+{
+  field ( readonly ) TravelId;
+  association _Booking;
+}
+
+define behavior for zi559461_i_booking_tcve //alias <alias_name>
+{
+  field ( readonly ) TravelId, BookingId;
+  association _Travel;
+  association _Suppl;
+}
+
+define behavior for zi559461_i_booking_sup_tcve //alias <alias_name>
+{
+  field ( readonly ) BookingId, TravelId, BookingSupplementId;
+  association _Travel;
+  association _Booking;
+}

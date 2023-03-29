@@ -1,0 +1,32 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo: { typeName: 'Booking',
+                  typeNamePlural: 'Bookings',
+                  title: { type: #STANDARD, label: 'Booking', value: 'BookingId' }}
+
+annotate view zi559461_c_booking_tcve with
+{
+  @UI.facet: [{ id: 'Booking',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Booking Details',
+                position: 10 },
+              { id: 'Suppl',
+                type: #LINEITEM_REFERENCE,
+                position: 20, label: 'Suppl',
+                targetElement: '_Suppl' }]
+
+  @UI:{ lineItem: [{ position: 10, label: 'TravelId' }], identification: [{ position: 10, label: 'TravelId' }] }
+  TravelId;
+  @UI:{ lineItem: [{ position: 20, label: 'BookingId' }], identification: [{ position: 20, label: 'BookingId' }] }
+  BookingId;
+  @UI:{ lineItem: [{ position: 30, label: 'BookingDate' }], identification: [{ position: 30, label: 'BookingDate' }] }
+  BookingDate;
+  @UI:{ lineItem: [{ position: 40, label: 'CustomerId' }], identification: [{ position: 40, label: 'CustomerId' }] }
+  CustomerId;
+  @UI:{ lineItem: [{ position: 50, label: 'CarrierId' }], identification: [{ position: 50, label: 'CarrierId' }] }
+  CarrierId;
+  @UI:{ lineItem: [{ position: 60, label: 'ConnectionId' }], identification: [{ position: 60, label: 'ConnectionId' }] }
+  ConnectionId;
+  @UI:{ lineItem: [{ position: 70, label: 'FlightDate' }], identification: [{ position: 70, label: 'FlightDate' }] }
+  FlightDate;
+}
